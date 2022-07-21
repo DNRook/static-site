@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="../css/About.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto+Condensed:400,700" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+
+    <body>
+        <section id="header">
+            <div class="container">
+
+            <div class="flex">
+
+                <div id="background">
+                    <img src="../images/about.png">
+                </div>
+
+                <div class="header-text">
+
+                    <h1 class="content-header"> About This Site</h1>
+                    <br>
+                    <span id="sq"></span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Placeat aliquam tenetur
+                         doloribus eos suscipit at, autem corporis 
+                         deserunt error natus, maxime aut inventore 
+                         accusantium id repellat. Sed natus distinctio nostrum?
+                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                         Tempora dolorum totam sunt ad dolores excepturi, 
+                         commodi perspiciatis alias nesciunt provident 
+                         consectetur esse quod perferendis nemo? Dignissimos 
+                         ducimus ipsum voluptatem molestias.
+                    </p>
+                    <br>
+
+                    <div id="quote">
+                    <h3> "Learning is not attained by chance, 
+                        it must be sought with ardor and diligence"
+                    </h3>
+                    <h4>--Abigail Adams</h4>
+                    
+                    </div>
+
+                    <div class="line">
+                        <span class="icon1"></span> <br>
+                        <span class="icon2"></span> <br>
+                        <span class="icon3"></span> <br>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            </div>
+        </section> 
+
+        <div id="label">
+             <h2> These were the Technolgies Used for This Site</h2>
+        </div>
+
+        <div id="grid">
+            <div id="html">
+                <img src="../images/html.png" class="icon">
+                <h4 class="icon-text"> HTML</h4>
+            </div>
+            <div id="css">
+                <img src="../images/css.png" class="icon">
+                <h4 class="icon-text"> CSS</h4>
+            </div>
+            <div id="JS">
+                <img src="../images/js.png" class="icon">
+                <h4 class="icon-text"> JavaScript</h4>
+            </div>
+            <div id="jquery">
+                <img src="../images/jquery.png" class="icon">
+                <h4 class="icon-text"> jQuery</h4>
+            </div>
+        </div>
+
+     
+        
+        <nav id="nav">
+            <ul id="options">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="feature.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+         </nav>
+    <img src="../images/menu2.png" id="menu">
+
+    <script>
+        var menu=document.getElementById("menu");
+        var nav=document.getElementById("nav");
+
+        nav.style.right="-500px";
+        menu.onmouseover=function(){
+            if(nav.style.right=="-500px")
+            {
+                nav.style.right="0";
+            }
+        }
+        menu.onclick=function(){
+            nav.style.right="-500px";
+        }
+        nav.onmouseenter=function(){
+            nav.style.right="0px";
+        }
+        nav.onmouseleave=function(){
+            nav.style.right="-500px";
+        }
+
+     </script>
+    </body>
+</html>

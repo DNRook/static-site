@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="../css/feature.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto+Condensed:400,700" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+
+    <body>
+   
+        <nav id="nav">
+            <ul id="options">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+         </nav>
+
+        <img src="../images/menu3.png" id="menu">
+
+       
+            <div class="overlay"></div>
+       
+             <div class="bottom-bar">
+                 <img src="../images/feature.png" class="image">
+                 <div id="intro">
+                     <h2>Experience</h2>
+                     <br>
+                 <p>Lorem, ipsum dolor sit amet consectetur 
+                     adipisicing elit. Eum nisi quis temporibus reiciendis
+                      placeat beatae doloremque molestias magnam quisquam
+                       neque obcaecati dignissimos laudantium, illo aliquam 
+                       sapiente amet itaque. Deleniti, natus!
+                 </p>
+                 </div>
+             </div>
+        
+        <div id="sidebar">
+            <div class="post" id="p1">
+                <h2 class="post-title">Post 1</h2>
+                <img src="../images/f1.png" class="img">
+                <p class="post-text">Lorem ipsum dolor sit amet, 
+                    consectetur adipisicing elit sed do.</p>
+            </div>	
+    
+            <div class="post" id="p2">
+                <h2 class="post-title">Post 2</h2>
+                <img src="../images/f2.png" class="img">
+                <p class="post-text">Eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.</p>
+            </div>
+    
+            <div class="post" id="p3">
+                <h2 class="post-title">Post 3</h2>
+                <img src="../images/f3.png" class="img">
+                <p class="post-text">Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris.</p> 
+            </div>
+    
+            <div class="post" id="p4">
+                <h2 class="post-title">Post 4</h2>
+                <img src="../images/f4.png" class="img">
+                <p class="post-text">Nisi ut aliquip ex ea commodo
+                consequat, nuis aute irure.</p>                
+            </div>		
+        </div>
+    
+        
+        <script>
+           var menu=document.getElementById("menu");
+        var nav=document.getElementById("nav");
+
+        nav.style.right="-500px";
+        menu.onmouseover=function(){
+            if(nav.style.right=="-500px")
+            {
+                nav.style.right="0";
+            }
+        }
+        menu.onclick=function(){
+            nav.style.right="-500px";
+        }
+        nav.onmouseenter=function(){
+            nav.style.right="0px";
+        }
+        nav.onmouseleave=function(){
+            nav.style.right="-500px";
+        }
+        </script>
+    </body>
+
+</html>

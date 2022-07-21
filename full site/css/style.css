@@ -1,0 +1,189 @@
+*{
+    padding:0;
+    margin:0;
+}
+#header{
+    height: 955px;
+    background-image: url("../images/background.png");
+    background-position: center;
+    background-size:cover;
+    /* cover stretch throughout the whole area while contain
+    ensures the whole image is shown (not cut off)*/
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+.container{
+    margin-left: 80px;
+    margin-right:90px;
+}
+#logo{
+    margin-top: 60px;
+    width:200px;
+    height:150px;
+    margin-left: 30px;
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadein{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.flex{
+    display: flex;
+    width: 37%;
+    margin-top: 100px;
+    margin-left:42px;
+}
+.header-text{
+    position: relative;
+    left:-500px;
+    overflow: hidden;
+    animation-name: slide-in;
+    animation-delay: 0.s;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-in{
+    0%{left:-800px;}
+    100%{left:5px;}
+}
+.header-text>p{
+    text-indent: 18px;
+    font-size: 17px;
+    font-family: sans-serif;
+    color: #7a7a7a;
+    line-height: 20px;
+}
+#extra{
+    font-family: sans-serif;
+    color: #7a7a7a;
+}
+.content-header{
+    font-size: 33px;
+    font-weight: bold;
+}
+#sq{
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: #f67c92;
+    margin: 15px 0;
+    /*
+    Inline elements:
+
+    respect left & right margins and padding, but not top & bottom
+    cannot have a width and height set
+    allow other elements to sit to their left and right.
+    see very important side notes on this here.
+
+    Block elements:
+
+    respect all of those
+    force a line break after the block element
+    acquires full-width if width not defined
+    
+    Inline-block elements:
+
+    allow other elements to sit to their left and right
+    respect top & bottom margins and padding
+    respect height and width
+    */
+}
+#read{
+    border:none;
+    outline: none;
+    background: transparent;
+    font-size: 17px;
+    padding: 13px 17px;
+    margin-top: 20px;
+    margin-left:15px;
+    border: 3px #f67c92 solid;
+    cursor: pointer;
+
+    background-image: linear-gradient(to right, lightgreen 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    transition: 0.5s;
+}
+#read:hover{
+    background-position: 0% 50%;
+    color: #707070;
+}
+
+.line{
+    margin-top: 120px;
+}
+.icon1{
+    width:15px;
+    height:15px;
+    background: #f67c92;
+    display: inline-block;
+}
+.icon2{
+    width:160px;
+    height:1px;
+    background: #f67c92;
+    display: inline-block;
+}
+.icon3{
+    width:120px;
+    height:1px;
+    background: #f67c92;
+    display: inline-block;
+}
+.icon4{
+    width:80px;
+    height:1px;
+    background: #f67c92;
+    display: inline-block;
+}
+#nav{
+    width: 300px;
+    height:100%;
+    position: fixed;
+    right: -500px;
+    top:0;
+    background: #f67c92;
+    z-index: 1;
+    /* positons this element above or under others*/
+    transition: 0.5s;
+    /* this is for the javascript animation in the html*/
+}
+#options>li{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 35px;
+}
+li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+}
+li a:hover{
+    text-decoration: underline;
+}
+#menu{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    top:0;
+    right: 0;
+    z-index: 2;
+    margin: 25px;
+    cursor: pointer;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    transition: 0.3s ease-in;
+}
+#menu:hover{
+  border-radius: 50px;
+}

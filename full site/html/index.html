@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+
+    <body data-barba="wrapper">
+
+        <section id="header">
+            <div class="container">
+                    <img src="../images/logo2.png" id="logo">
+            <div class="flex">
+                <div class="header-text">
+                    <h1 class="content-header"> The Purpose of Teaching <br> is 
+                    to Bring Learning to People</h1>
+                    <span id="sq"></span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Placeat aliquam tenetur
+                         doloribus eos suscipit at, autem corporis 
+                         deserunt error natus, maxime aut inventore 
+                         accusantium id repellat. Sed natus distinctio nostrum?
+                    </p>
+                    <br>
+
+                    <div id="extra">
+                        <p >
+                            Lorem ipsum dolor sit amet consectetur adipisi cing elit. 
+                            Veniam iure, quas molestias, ducimus illo eius officiis 
+                            accusantium numquam deleniti, nisi animi. Dolore
+                            in culpa quae quasi vero, quisquam sapiente eveniet?
+                        </p>
+                    </div>
+                     <input type="button" value="Read More" id="read">
+                    <div class="line">
+                        <span class="icon1"></span> <br>
+                        <span class="icon2"></span> <br>
+                        <span class="icon3"></span> <br>
+                        <span class="icon4"></span> <br>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        </section>  
+
+         <nav id="nav">
+                <ul id="options">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="feature.html">Features</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        </nav>
+        <img src="../images/menu.png" id="menu">
+        
+        <script>
+           var menu=document.getElementById("menu");
+           var nav=document.getElementById("nav");
+
+           nav.style.right="-500px";
+           menu.onmouseover=function(){
+               if(nav.style.right=="-500px")
+               {
+                   nav.style.right="0";
+               }
+           }
+           menu.onclick=function(){
+               nav.style.right="-500px";
+           }
+           nav.onmouseenter=function(){
+               nav.style.right="0px";
+           }
+           nav.onmouseleave=function(){
+               nav.style.right="-500px";
+           }
+           //to use the style method, you need to first point the id/class to 
+           //a variable then you can use style to use any css tag
+           $('#extra').slideUp();
+           $('#read').click(function(){
+                $('#extra').slideToggle(1000)
+           });
+        </script>
+
+    
+    </body>
+
+</html>

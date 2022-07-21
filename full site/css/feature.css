@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding:0;
+}
+@keyframes fadein{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+html{
+    width: 100%;
+    height:130%;
+    background-image: linear-gradient(to right,#7fffd4, #afeeee);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+.img{
+    width: 110px;
+    display: inline-block;
+}
+#sidebar{
+    font-family: 'Lato', sans-serif;
+   display: flex;
+   width: 50%;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   top:90px;
+   left: 37%;
+   z-index: 1;
+}
+.post{
+    margin:10px;
+    
+}
+#p1{
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 0.25s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+#p2{
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+#p3{
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 0.75s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+#p4{
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.bottom-bar{
+   width: 100%;
+   height: 250px;
+   background: #72ced8;
+   position: fixed;
+   left: 1px;
+   bottom: 0%;
+   z-index: 2;
+   display: flex;
+   opacity: 0;
+   animation-fill-mode: forwards;
+   animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 0.25s;
+    animation-timing-function: ease-in;
+}
+.bottom-bar>img{
+    z-index: 2;
+    width: 650px;
+    height: 400px;
+    position: relative;
+    bottom: 90px;
+}
+#intro{
+    z-index: 2;
+    position: relative;
+    top:20px;
+    width: 75%;
+    margin-left: 10px;
+    padding-right: 50px;
+    color: grey;
+    font-family: 'Lato', sans-serif;
+}
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 500px solid #ffc0cb;
+    border-left: 250px solid #ffc0cb;
+    border-bottom: 600px solid #ffc0cb;
+     z-index: 1;
+    position: absolute;
+    left:-150px;
+    top:0;
+    border-right: 300px solid transparent;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 0.1s;
+    animation-timing-function: ease-in;
+}
+nav{
+    width: 300px;
+    height:100%;
+    position: fixed;
+    right: -500px;
+    top:0;
+    background: #8eeacb;
+    z-index: 3;
+    /* positons this element above or under others*/
+    transition: 0.5s;
+    /* this is for the javascript animation in the html*/
+}
+
+#options>li{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 35px;
+}
+li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+}
+li a:hover{
+    text-decoration: underline;
+}
+#menu{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    top:0;
+    right: 0;
+    z-index: 4;
+    margin: 25px;
+    cursor: pointer;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    transition: 0.3s ease-in;
+}
+#menu:hover{
+  border-radius: 50px;
+}

@@ -1,0 +1,255 @@
+html{
+    background: linear-gradient(to right, #f67c92, #ffc55a);
+    background-size: cover;
+    background-attachment: fixed;
+    /* the background attatchment sets whether a background image scrolls with 
+    the rest of the page*/
+    /*scroll: background image will scroll with the page
+      Fixed: the background image will not scroll with the page
+      local: the background image will sctoll with element's contents*/
+    width: 100%;
+}
+.form{
+    width: 300px;
+    margin: 20px;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+.form input{
+    width: 100%;
+    height: 100%;
+    color: #595f6e;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    background: #ffeb7f;
+}
+.form label{
+    font-size: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #898989;
+    color: #898989;
+}
+.form label::after{
+    content:"";
+    position: absolute;
+    bottom: -1px;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+.content-name{
+    padding-left: 10px;
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name{
+    transform: translateY(-150%);
+    font-size: 15px;
+    color: #5fa8d3;
+
+}
+.form input:focus + .label-name::after, 
+.form input:valid +.label-name::after{
+    transform: translateX(0%);
+}
+/*----------------------------------------------------------------------------------------------*/
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    position: absolute;
+    left: 150px;
+}
+.right img{
+    width: 850px;
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.left{
+    border: 5px solid #ffd700;
+    padding: 20px 30px;
+    padding-bottom: 25px;
+    background: #ffeb7f;
+    margin-left: 7%;
+    position: relative;
+    bottom: 150px;
+    left: -1000px;
+    animation-name: slide-in;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-in{
+    0%{left:-1000px;}
+    100%{left:5px;}
+}
+.btn{
+    cursor: pointer;
+    margin-left: 20px;
+    padding:10px 15px;
+    border: 3px solid #f67c92;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #ffa500 50%, #ffeb7f 50%);
+    color: #707070;
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    transition: 0.4s ease-in;
+}
+.btn:hover{
+    background-position: 0% 50%;
+}
+.left>h1{
+    font-family: 'Lato',sans-serif;
+    text-decoration: underline;
+    color: grey;
+}
+/*-----------------------------------------------------------------------------------------------*/
+#nav{
+    width: 300px;
+    height:100%;
+    position: fixed;
+    right: -500px;
+    top:0;
+    background: #ffa500;
+    z-index: 1;
+    /* positons this element above or under others*/
+    transition: 0.5s;
+    /* this is for the javascript animation in the html*/
+}
+#options>li{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 35px;
+}
+li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+}
+li a:hover{
+    text-decoration: underline;
+}
+#menu{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    top:0;
+    right: 0;
+    z-index: 2;
+    margin: 25px;
+    cursor: pointer;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    transition: 0.3s ease-in;
+}
+#menu:hover{
+  border-radius: 50px;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.join{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 200px;
+    left: 200px;
+    transform: scale(0);
+    animation-name: grow;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+@keyframes grow{
+    0%{transform: scale(0);}
+    80%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+.title{
+    font-size: 30px;
+    font-family: 'Rowdies', cursive;
+    text-align: center;
+    color:grey
+}
+.social{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 1;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+.social>h3{
+    position: relative;
+    bottom: 50px;
+}
+.social>a{
+    display: flex;
+    background:#ddd;
+	height: 75px;
+	width:75px;
+	margin: 0 15px;
+	border-radius: 8px;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+.social a i{
+    font-size: 35px;
+    color: #777777;
+}
+.social>a:hover{
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.15),
+				inset -4px -4px 6px -1px rgba(255,255,255,0.7),	
+				0.5px 0.5px 0px 0px rgba(0,0,0,0.15),
+				0px 12px 10px -10px rgba(0,0,0,0.05);
+	transform: translateY(2px);
+}
+.social>a:hover i{
+    transform: scale(0.9);
+}
+.social>a:hover .fa-facebook{
+	color:#3b5998;
+}
+.social>a:hover .fa-whatsapp{
+	color:#4fce5d;
+}
+.social>a:hover .fa-twitter{
+	color:#00acee;
+}
+.social>a:hover .fa-instagram{
+	color:#ff00ff;
+}
+.social>a:hover .fa-youtube{
+	color:#f00;
+}
